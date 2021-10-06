@@ -8,6 +8,11 @@
 	font-style: normal;
 }
 
+ul {
+	list-style: none;
+	display: flex;
+}
+
 div[class^="row"] {
 	display: flex;
 }
@@ -38,14 +43,16 @@ body {
 }
 
 nav {
-	margin: 48px auto 114.5px auto;
+	margin: 55px auto 114.5px auto;
 	width: 76.67%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-nav a {
+
+
+nav li a {
 	font-weight: normal;
 	font-size: 13px;
 	line-height: 15px;
@@ -54,7 +61,7 @@ nav a {
 	color: #252b46;
 }
 
-nav a:last-of-type {
+nav li:last-of-type a{
 	margin-left: 49px;
 	font-weight: 500;
 	letter-spacing: 0.1em;
@@ -66,16 +73,16 @@ nav a:last-of-type {
 	box-shadow: 0px 8px 10px -2px #e6e7f9;
 }
 
-nav a:nth-of-type(2) {
+nav li:nth-of-type(2) a{
 	margin-left: 44px;
 	margin-right: 47px;
 }
 
-nav a:hover {
+nav li a:hover {
 	color: #fa5757;
 }
 
-nav a:last-of-type:hover {
+nav li a:last-of-type:hover {
 	background-color: #fff;
 	border-color: #fa5757;
 }
@@ -88,7 +95,7 @@ nav a:last-of-type:hover {
 }
 
 .paragraph1 h1 {
-	margin-top: 71px;
+	margin-top: 79px;
 	margin-bottom: 26px;
 	font-weight: 500;
 	font-size: 48px;
@@ -99,10 +106,10 @@ nav a:last-of-type:hover {
 .paragraph1 p {
 	width: 80%;
 	letter-spacing: 0.003em;
-	margin-bottom: 32px;
+	margin-bottom: 43px;
 }
 
-.paragraph1 a {
+.paragraph1 li a {
 	padding: 13px 22px;
 	font-weight: 500;
 	font-size: 14.5px;
@@ -110,7 +117,7 @@ nav a:last-of-type:hover {
 	border-radius: 5px;
 }
 
-.paragraph1 a:first-of-type {
+.paragraph1 li:first-of-type a {
 	margin-right: 16px;
 	color: #fff;
 	background-color: #5267df;
@@ -118,19 +125,19 @@ nav a:last-of-type:hover {
 	box-shadow: 0px 4px 10px -2px rgba(82, 103, 223, 0.5);
 }
 
-.paragraph1 a:first-of-type:hover {
+.paragraph1 li:first-of-type:hover a {
 	color: #5267df;
 	background-color: #fff;
 }
 
-.paragraph1 a:nth-of-type(2) {
+.paragraph1 li:nth-of-type(2) a {
 	color: #5c5c68;
 	background-color: #f7f7f7;
 	border: 2px solid #f7f7f7;
 	box-shadow: 0px 4px 10px -2px rgba(92, 92, 104, 0.25);
 }
 
-.paragraph1 a:nth-of-type(2):hover {
+.paragraph1 li:nth-of-type(2):hover a {
 	border-color: #5c5c68;
 	background-color: #fff;
 }
@@ -157,9 +164,11 @@ nav a:last-of-type:hover {
 	align-items: center;
 	width: max-content;
 	margin: 0 auto;
+	
 }
 
 #Features h2 {
+	margin-top: 22px;
 	margin-bottom: 23px;
 	font-weight: 500;
 	font-size: 32px;
@@ -283,7 +292,7 @@ nav a:last-of-type:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 165px;
+	margin-top: 155px;
 }
 
 .download h2 {
@@ -357,7 +366,7 @@ nav a:last-of-type:hover {
 	color: #ffffff;
 }
 
-.browserCard button:hover{
+.browserCard button:hover {
 	background-color: #fff;
 	color: #5368df;
 }

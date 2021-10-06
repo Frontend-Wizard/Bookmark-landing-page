@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="Images/favicon-32x32.png" type="image/x-icon">
+        <title>Bookmark landing page</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav>
+                <img src="Images/logo-bookmark.svg" alt="Logo">
+                <ul>
+                    <a href="#Features">FEATURES</a>
+                    <a href="#PRICING">PRICING</a>
+                    <a href="#CONTACT">CONTACT</a>
+                    <a href="#">LOGIN</a>
+                </ul>
+            </nav>
+            <div class="row1">
+                <div class="paragraph1">
+                    <h1>A Simple Bookmark Manager</h1>
+                    <p>
+                        A clean and simple interface to organize your favourite
+                        websites. Open a new browser tab and see your sites load
+                        instantly. Try it for free.
+                    </p>
+                    <ul>
+                        <a href="#Chrome">Get it on Chrome</a>
+                        <a href="#Firefox">Get it on Firefox</a>
+                    </ul>
+                </div>
+                <div class="ImageBG1">
+                    <img src="Images/illustration-hero.svg" alt="Illustration">
+                </div>
+            </div>
+            <div id="Features">
+                <h2>Features</h2>
+                <p>
+                    Our aim is to make it quick and easy for you to access your
+                    favourite websites. Your bookmarks sync between your devices
+                    so you can access them on the go.
+                </p>
+                <div class="tabs">
+                    <ul>
+                        <button id="Bookmarking">Simple Bookmarking</button>
+                        <button id="Searching">Speedy Searching</button>
+                        <button id="Sharing">Easy Sharing</button>
+                    </ul>
+                </div>
+            </div>
+            <div id="BookmarkingTab" class="row tab1">
+                <img src="Images/illustration-features-tab-1.svg" alt="">
+                <div class="column1">
+                    <h2>Bookmark in one click</h2>
+                    <p>
+                        Organize your bookmarks however you like. Our
+                        simple drag-and-drop interface gives you complete
+                        control over how you manage your favourite sites.
+                    </p>
+                    <button>More Info</button>
+                </div>
+            </div>
+
+            <div id="SearchingTab" class="row tab2">
+                <div class="ImageBG2">
+                    <img src="Images/illustration-features-tab-2.svg" alt="">
+                </div>
+                <div class="column1">
+                    <h2>Intelligent search</h2>
+                    <p>
+                        Our powerful search feature will help you find saved sites in no time at all.
+                        No need to trawl through all of your bookmarks.
+                    </p>
+                    <button>More Info</button>
+                </div>
+            </div>
+
+            <div id="SharingTab" class="row tab1">
+                <img src="Images/illustration-features-tab-3.svg" alt="">
+                <div class="column1">
+                    <h2>Share your bookmarks</h2>
+                    <p>
+                        OEasily share your bookmarks and collections with others. Create a shareable
+                        link that you can send at the click of a button.
+                    </p>
+                    <button>More Info</button>
+                </div>
+            </div>
+            <div class="download">
+                <h2>Download the extansion</h2>
+                <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like
+                    us to prioritize.</p>
+            </div>
+            <div class="browserCards">
+                <div class="browserCard">
+                    <img src="Images/logo-chrome.svg" alt="Chrome logo">
+                    <h2>Add to Chrome</h2>
+                    <h3>Minimum version 62</h3>
+                    <img src="Images/bg-dots.svg" alt="">
+                    <button>Add & Install Extansion</button>
+                </div>
+                <div class="browserCard">
+                    <img src="Images/logo-firefox.svg" alt="Firefox logo">
+                    <h2>Add to Firefox</h2>
+                    <h3>Minimum version 55</h3>
+                    <img src="Images/bg-dots.svg" alt="">
+                    <button>Add & Install Extansion</button>
+                </div>
+                <div class="browserCard">
+                    <img src="Images/logo-opera.svg" alt="Opera logo">
+                    <h2>Add to Opera</h2>
+                    <h3>Minimum version 46</h3>
+                    <img src="Images/bg-dots.svg" alt="">
+                    <button>Add & Install Extansion</button>
+                </div>
+            </div>
+            <div class="FAQ">
+                <h2>Frequently Asked Questions</h2>
+                <h3>
+                    Here are some of our FAQs. If you have any other questions
+                    you’d like
+                    answered please feel free to email us.
+                </h3>
+                <div id="question1">
+                    <h2>What is Bookmark?</h2>
+                    <div class="answer1"></div>
+                </div>
+                <div id="question2">
+                    <h2>How can I request a new browser?</h2>
+                    <div class="answer2"></div>
+                </div>
+                <div id="question3">
+                    <h2>Is there a mobile app?</h2>
+                    <div class="answer3"></div>
+                </div>
+                <div id="question4">
+                    <h2>What about other Chromium browsers?</h2>
+                    <div class="answer4"></div>
+                </div>
+                <button>More Info</button>
+            </div>
+        </div>
+        <div class="column contactUs">
+            <h3>35,000+ ALREADY JOINED</h3>
+            <h1>Stay up-to-date with what we’re doing</h1>
+            <div id="CONTACT">
+                <!-- This div need to be changed to form for backend access -->
+                <div class="row EmailinputForm">
+                    <div>
+                        <input type="text" name="Email" id="EmailInput" placeholder="Enter your email address">
+                        <p>Whoops, make sure it's an email</p>
+                    </div>
+                    <button type="submit" id="EmailInputSubmit">Contact Us</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <a href="#"><img src="Images/logo-bookmarkWhite.svg" alt="Logo"></a>
+                <a href="#Features">FEATURES</a>
+                <a href="#PRICING">PRICING</a>
+                <a href="#CONTACT">CONTACT</a>
+            </ul>
+            <ul>
+                <a href="#Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path fill-rule="evenodd"
+                            d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+                    </svg>
+                </a>
+                <a href="#Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+                        <path fill-rule="evenodd"
+                            d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
+                    </svg>
+                </a>
+            </ul>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>

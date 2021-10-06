@@ -38,10 +38,10 @@ body {
 }
 
 nav {
-	margin: 0 auto;
-	margin-top: 48px;
+	margin: 48px auto 114.5px auto;
 	width: 76.67%;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 }
 
@@ -88,7 +88,7 @@ nav a:last-of-type:hover {
 }
 
 .paragraph1 h1 {
-	margin-top: 80px;
+	margin-top: 71px;
 	margin-bottom: 26px;
 	font-weight: 500;
 	font-size: 48px;
@@ -103,7 +103,7 @@ nav a:last-of-type:hover {
 }
 
 .paragraph1 a {
-	padding: 10px 22px;
+	padding: 13px 22px;
 	font-weight: 500;
 	font-size: 14.5px;
 	line-height: 28px;

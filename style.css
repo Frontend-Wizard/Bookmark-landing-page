@@ -233,9 +233,9 @@ nav li a:last-of-type:hover {
 }
 
 .column1 p {
-	width: 71%;
+	max-width: 437px;
 	margin-top: 23px;
-	margin-bottom: 32px;
+	margin-bottom: 33px;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 1.56em;
@@ -419,8 +419,8 @@ div[id^="question"]:last-of-type {
 }
 
 div[id^="question"] h2 {
-	margin-top: 21px;
-	margin-bottom: 22px;
+	margin-top: 18px;
+	margin-bottom: 19px;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 1.56em;

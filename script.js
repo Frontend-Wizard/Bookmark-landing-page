@@ -1,3 +1,4 @@
+/////////////////////////////// Tab changing //////////////////////////////////// 
 const TabsMenu = [
 	document.getElementById("Bookmarking"),
 	document.getElementById("Searching"),
@@ -68,3 +69,85 @@ EmailInputSubmit.addEventListener("click", () => {
 EmailInput.addEventListener("change", () => {
 	CheckEmail(EmailInput.value);
 });
+
+///////////////////////////// FAQ Functions ///////////////////////////////////////////////////////
+
+let questions = document.querySelectorAll('div[id^="question"] h2');
+
+let answers = document.querySelectorAll('div[id^="answer"]');
+
+for (let i = 0; i < answers.length; i++)
+	answers[1][i] = parseInt(
+		window
+			.getComputedStyle(document.querySelectorAll('div[id^="answer"]')[i])
+			.height.slice(0, -2)
+	);
+
+for (let i = 0; i < questions.length; i++) {
+	let k = [questions[i], answers[i]];
+	k[0].addEventListener("click", () => {
+		k[0].classList.toggle("arrowActive");
+		k[0].classList.contains("arrowActive")
+			? shrink(k[1])
+			: grow(k[1], answers[1][i]);
+	});
+}
+
+function shrink(k) {
+	let height = parseInt(window.getComputedStyle(k).height.slice(0, -2));
+	for (let i = height; i >= 0; i--) {
+		setTimeout(() => {
+			k.style.height = height - i + "px";
+		}, (100 / height) * i);
+	}
+}
+
+function grow(k, height) {
+	for (let i = 0; i <= height; i++) {
+		setTimeout(() => {
+			k.style.height = i + "px";
+		}, (100 / height) * i);
+	}
+}
+
+for (let i = 0; i < questions.length; i++) questions[i].click();
+
+///////////////////////////////// Animation ////////////////////////////////////////////////////////////////
+
+let windowHeight;
+let elements = document.querySelectorAll(".browserCard");
+
+function init() {
+	windowHeight = window.innerHeight;
+}
+
+function checkPosition() {
+	elements.forEach((element) => {
+		let positionFromTop = element.getBoundingClientRect().top;
+		if (positionFromTop - windowHeight <= -200) {
+			element.style.animation = "slideInDown 1s 1 forwards";
+		}
+	});
+
+	document.querySelectorAll(".tab1 img").forEach((element) => {
+		let positionFromTop = element.getBoundingClientRect().top;
+		if (positionFromTop - windowHeight <= -200) {
+			element.style.animation = "slideInLeft 1s 1 forwards";
+		}
+	});
+
+	document
+		.querySelectorAll('.tab1 div[class^="column"],.tab2 div[class^="column"]')
+		.forEach((element) => {
+			let positionFromTop = element.getBoundingClientRect().top;
+			if (positionFromTop - windowHeight <= -200) {
+				element.style.animation = "slideInRight 1s 1 forwards";
+			}
+		});
+}
+
+init();
+checkPosition();
+
+window.addEventListener("scroll", checkPosition);
+window.addEventListener("resize", init);

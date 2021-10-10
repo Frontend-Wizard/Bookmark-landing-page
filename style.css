@@ -1,3 +1,66 @@
+:root {
+	--arrow: url("Images/icon-arrow.svg");
+	--arrowActive: url("Images/icon-arrow-active.svg");
+}
+
+@keyframes bounce {
+	0% {
+		bottom: 0;
+	}
+
+	50% {
+		bottom: 20px;
+	}
+
+	100% {
+		bottom: 0;
+	}
+}
+
+@keyframes slideInDown {
+	0% {
+		top: 200px;
+	}
+
+	100% {
+		opacity: 1;
+		top: 0;
+	}
+}
+
+@keyframes slideInTop {
+	0% {
+		bottom: 200px;
+	}
+
+	100% {
+		opacity: 1;
+		bottom: 0;
+	}
+}
+
+@keyframes slideInLeft {
+	0% {
+		right: 200px;
+	}
+
+	100% {
+		opacity: 1;
+		right: 0;
+	}
+}
+
+@keyframes slideInRight {
+	0% {
+		left: 200px;
+	}
+
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
 * {
 	outline: none;
 	scroll-behavior: smooth;
@@ -6,6 +69,10 @@
 	margin: 0;
 	font-family: Rubik;
 	font-style: normal;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 ul {
@@ -43,14 +110,15 @@ body {
 }
 
 nav {
+	position: relative;
+	opacity: 0;
+	animation: slideInTop 1s 1 forwards;
 	margin: 55px auto 114.5px auto;
 	width: 76.67%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-
-
 
 nav li a {
 	font-weight: normal;
@@ -61,7 +129,7 @@ nav li a {
 	color: #252b46;
 }
 
-nav li:last-of-type a{
+nav li:last-of-type a {
 	margin-left: 49px;
 	font-weight: 500;
 	letter-spacing: 0.1em;
@@ -73,7 +141,7 @@ nav li:last-of-type a{
 	box-shadow: 0px 8px 10px -2px #e6e7f9;
 }
 
-nav li:nth-of-type(2) a{
+nav li:nth-of-type(2) a {
 	margin-left: 44px;
 	margin-right: 47px;
 }
@@ -92,6 +160,12 @@ nav li a:last-of-type:hover {
 	margin-top: 105px;
 	margin-bottom: 89px;
 	width: calc(100% - 165px);
+}
+
+.paragraph1 {
+	opacity: 0;
+	position: relative;
+	animation: slideInLeft 1s 1 forwards;
 }
 
 .paragraph1 h1 {
@@ -118,6 +192,8 @@ nav li a:last-of-type:hover {
 }
 
 .paragraph1 li:first-of-type a {
+	position: relative;
+	animation: bounce 1s 1 1s;
 	margin-right: 16px;
 	color: #fff;
 	background-color: #5267df;
@@ -131,6 +207,8 @@ nav li a:last-of-type:hover {
 }
 
 .paragraph1 li:nth-of-type(2) a {
+	position: relative;
+	animation: bounce 1s 1 1.5s;
 	color: #5c5c68;
 	background-color: #f7f7f7;
 	border: 2px solid #f7f7f7;
@@ -144,6 +222,8 @@ nav li a:last-of-type:hover {
 
 .ImageBG1 {
 	position: relative;
+	opacity: 0;
+	animation: slideInRight 1s 1 forwards;
 }
 
 .ImageBG1::after {
@@ -152,7 +232,7 @@ nav li a:last-of-type:hover {
 	position: absolute;
 	right: 0;
 	bottom: -9px;
-	width: 70.5%;
+	width: 85%;
 	height: 70%;
 	background: #5368df;
 	border-radius: 176px 0px 0px 176px;
@@ -164,7 +244,6 @@ nav li a:last-of-type:hover {
 	align-items: center;
 	width: max-content;
 	margin: 0 auto;
-	
 }
 
 #Features h2 {
@@ -218,8 +297,20 @@ nav li a:last-of-type:hover {
 .tab1 {
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
 }
+
+.tab1 img,
+.ImageBG2 {
+	position: relative;
+	opacity: 0;
+}
+
+.tab1 div[class^="column"],
+.tab2 div[class^="column"] {
+	position: relative;
+	opacity: 0;
+}
+
 .column1 {
 	margin-top: 64px;
 	margin-left: 125px;
@@ -265,6 +356,8 @@ nav li a:last-of-type:hover {
 
 .ImageBG2 {
 	position: relative;
+	opacity: 0;
+	animation: slideInLeft 1s 1 forwards;
 }
 
 .ImageBG2 img {
@@ -278,7 +371,7 @@ nav li a:last-of-type:hover {
 	left: 0;
 	bottom: -9px;
 	width: 85%;
-	height: 70%;
+	height: 82.5%;
 	background: #5368df;
 	border-radius: 0 176px 176px 0;
 }
@@ -320,6 +413,8 @@ nav li a:last-of-type:hover {
 }
 
 .browserCard {
+	opacity: 0;
+	position: relative;
 	box-sizing: border-box;
 	padding-top: 51px;
 	width: 280px;
@@ -428,9 +523,32 @@ div[id^="question"] h2 {
 	text-align: left;
 }
 
+div[id^="question"] h2:hover {
+	color: #fa5757;
+}
+
 div[id^="question"] h2::after {
-	content: url("Images/icon-arrow.svg");
+	margin-right: 24px;
+	content: var(--arrowActive);
 	float: right;
+}
+
+.arrowActive::after {
+	content: var(--arrow) !important;
+}
+
+div[id^="answer"] {
+	overflow: hidden;
+}
+
+div[id^="answer"] p {
+	margin-bottom: 31px;
+	max-width: 539px;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 2.12em;
+	letter-spacing: -0.02em;
+	color: #9194a1;
 }
 
 .FAQ button {
@@ -567,7 +685,7 @@ footer ul {
 	align-items: center;
 }
 
-footer ul a {
+footer ul li a {
 	margin-left: 44px;
 	font-weight: normal;
 	font-size: 13px;
@@ -576,19 +694,19 @@ footer ul a {
 	color: #ffffff;
 }
 
-footer ul a:first-of-type {
-	margin-left: 63px;
+footer ul li a:first-of-type {
+	margin-left: 40px;
 }
 
-footer ul a:hover {
+footer ul li a:hover {
 	color: #fa5757;
 }
 
-footer ul a svg {
+footer ul li a svg {
 	cursor: pointer;
 	fill: #fff;
 }
 
-footer ul a svg:hover {
+footer ul li a svg:hover {
 	fill: #fa5757;
 }

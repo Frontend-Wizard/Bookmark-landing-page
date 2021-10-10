@@ -1,4 +1,4 @@
-/////////////////////////////// Tab changing //////////////////////////////////// 
+/////////////////////////////// Tab changing ////////////////////////////////////
 const TabsMenu = [
 	document.getElementById("Bookmarking"),
 	document.getElementById("Searching"),
@@ -151,3 +151,44 @@ checkPosition();
 
 window.addEventListener("scroll", checkPosition);
 window.addEventListener("resize", init);
+
+//////////////////////////////////// Mobile navigation ////////////////////////////////////////////
+
+let hamburger = document.getElementById("hamburgerMenu");
+let mobileNav = document.getElementById("mobileNav");
+let close = document.getElementById("close");
+let nav = document.querySelector("nav");
+let navElements = document.querySelectorAll(".mobileNav ul li a");
+
+function ToggleNav() {
+	nav.style.animation =
+		window.getComputedStyle(nav).display === "flex"
+			? "slideOutTop 1s 1 forwards"
+			: "slideInTop 1s 1 forwards";
+	mobileNav.style.animation =
+		window.getComputedStyle(nav).display === "flex"
+			? "navigationSlideInLeft 1s 1 forwards"
+			: "navigationSlideOutLeft .5s 1 forwards";
+	setTimeout(() => {
+		mobileNav.style.display =
+			window.getComputedStyle(mobileNav).display === "flex" ? "none" : "flex";
+		nav.style.display =
+			window.getComputedStyle(nav).display === "flex" ? "none" : "flex";
+	}, 300);
+}
+
+hamburger.addEventListener("click", ToggleNav);
+close.addEventListener("click", ToggleNav);
+
+navElements.forEach((element) => {
+	element.addEventListener("click", ToggleNav);
+});
+
+window.addEventListener("resize", () => {
+	if (window.innerWidth > 640) {
+		mobileNav.style.display = "none";
+		nav.style.display = "flex";
+		nav.style.opacity = "1";
+		nav.style.top="0";
+	}
+});

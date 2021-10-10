@@ -328,13 +328,15 @@ nav li a:last-of-type:hover {
 	max-width: 705px;
 	width: 50%;
 	position: relative;
-	opacity: 0;
+	/*///////////////////*/
+	opacity: 1;
 }
 
 .tab1 div[class^="column"] {
 	margin-right: 10px;
 	position: relative;
-	opacity: 0;
+	/*///////////////////*/
+	opacity: 1;
 }
 
 .column1 {
@@ -417,7 +419,8 @@ nav li a:last-of-type:hover {
 }
 
 .browserCard {
-	opacity: 0;
+	/*///////////////////*/
+	opacity: 1;
 	position: relative;
 	box-sizing: border-box;
 	padding-top: 51px;
